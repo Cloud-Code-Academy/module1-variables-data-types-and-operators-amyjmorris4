@@ -89,7 +89,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return mod (num, 2) == 0; 
+        if (Math.mod(num, 2) == 0)
+            return True;
+        return False;
     }
 
     /**
@@ -267,7 +269,7 @@ public with sharing class VariablesDataTypesOperators {
 
         // Write the code for type casting the divisionResult to an Integer
         // Note: intValue() Returns the Integer value of this Double by casting it to an Integer.
-        Integer roundedResult = divisionResult,intValue();
+        Integer roundedResult = divisionResult.intValue();
         return roundedResult; 
     }
 
@@ -310,7 +312,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        Decimal result = (pricePerUnit * numberOfUnits) * (1 + salesTaxRate)
+        Decimal result = (pricePerUnit * numberOfUnits) * (1 + salesTaxRate);
         return result;
     }
 }
